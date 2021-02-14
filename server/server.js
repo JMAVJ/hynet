@@ -1,6 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 
 app = express();
+
+app.use(cors({ credentials: true, origin: true }));
 
 // Load Routes
 app.use('/player', require('./routes/player'));
